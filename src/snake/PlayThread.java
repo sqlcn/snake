@@ -27,11 +27,11 @@ public class PlayThread extends Thread {
 
 				if (isStop)
 					break;
-				if (cnt > 0) {// Ğ´Èë»º´æÊı¾İ
+				if (cnt > 0) {// å†™å…¥ç¼“å­˜æ•°æ®
 					sourceDataLine.write(tempBuffer, 0, cnt);
 				}
 			}
-			// BlockµÈ´ıÁÙÊ±Êı¾İ±»Êä³öÎª¿Õ sourceDataLine.drain(); sourceDataLine.close();
+			// Blockç­‰å¾…ä¸´æ—¶æ•°æ®è¢«è¾“å‡ºä¸ºç©º sourceDataLine.drain(); sourceDataLine.close();
 			// hasStop = true;
 		} catch (Exception e) {
 			e.printStackTrace();

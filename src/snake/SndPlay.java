@@ -16,7 +16,7 @@ public class SndPlay {
 	byte[] buffer;
 	boolean isPlaying = false;
 
-	// ¹¹Ôì·½·¨
+	// æ„é€ æ–¹æ³•
 	public SndPlay(File file) {
 		FileInputStream inStream = null;
 		try {
@@ -44,7 +44,7 @@ public class SndPlay {
 		}
 	}
 
-	// ²¥·Å·½·¨
+	// æ’­æ”¾æ–¹æ³•
 	public void play() {
 		ByteArrayInputStream bytesStream = null;
 		bytesStream = new ByteArrayInputStream(buffer);
@@ -74,7 +74,7 @@ public class SndPlay {
 	public void close() {
 		if (player != null) {
 			isPlaying = false;
-			player.close();// ÏÈ°ÑÖ®Ç°µÄÊµÀıÊÍ·Å
+			player.close();// å…ˆæŠŠä¹‹å‰çš„å®ä¾‹é‡Šæ”¾
 			player = null;
 		}
 	}

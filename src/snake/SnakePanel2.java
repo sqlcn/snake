@@ -73,7 +73,7 @@ public class SnakePanel2 extends JPanel implements KeyListener, ActionListener {
 			// audioInputStream = AudioSystem.getAudioInputStream(new File(
 			// "U:/AndroidWorkSpace/snake/bg1.wav"));
 			// audioFormat = audioInputStream.getFormat();
-			// // 转换MP3文件编码
+			// // 杞崲MP3鏂囦欢缂栫爜
 			// if (audioFormat.getEncoding() != AudioFormat.Encoding.PCM_SIGNED)
 			// {
 			// audioFormat = new AudioFormat(
@@ -89,7 +89,7 @@ public class SnakePanel2 extends JPanel implements KeyListener, ActionListener {
 			// // TODO Auto-generated catch block
 			// e.printStackTrace();
 			// }
-			// // 打开输出设备
+			// // 鎵撳紑杈撳嚭璁惧
 			// DataLine.Info dataLineInfo = new DataLine.Info(
 			// SourceDataLine.class, audioFormat,
 			// AudioSystem.NOT_SPECIFIED);
@@ -132,7 +132,7 @@ public class SnakePanel2 extends JPanel implements KeyListener, ActionListener {
 	}
 
 	private void init() {
-		// 初始化键盘和缓冲区指针；
+		// 鍒濆鍖栭敭鐩樺拰缂撳啿鍖烘寚閽堬紱
 		snake = new SnakeBase(width, height);
 		map = snake.getSnake();
 		keyPh = 0;

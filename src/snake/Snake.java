@@ -19,7 +19,7 @@ public class Snake {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ªÒ»°∆¡ƒª∑÷±Ê¬ 
+		// Ëé∑ÂèñÂ±èÂπïÂàÜËæ®Áéá
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Dimension scrnsize = toolkit.getScreenSize();
 		// System.out.println ("Screen size : " + scrnsize.width + " * " +
@@ -32,7 +32,7 @@ public class Snake {
 				(scrnsize.height - 740) / 2, 900, 740);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setTitle("Ã∞≥‘…ﬂ");
+		frame.setTitle("Ë¥™ÂêÉËõá");
 
 		frame.setMenu();
 		// SnakePanel panel = new SnakePanel();
@@ -57,23 +57,23 @@ class mainFrame extends JFrame implements ActionListener {
 //		this.panel = panel;
 //		music = new Music();
 		if (SnakePanel2.musicStatus) {
-			musicMenu.setLabel("    ±≥æ∞“Ù¿÷  on");
+			musicMenu.setLabel("Music on");
 //			music.loadMusic();
 //			panel.turnMusic(true);
 		} else {
-			musicMenu.setLabel("    ±≥æ∞“Ù¿÷  off");
+			musicMenu.setLabel("Music off");
 //			panel.turnMusic(false);
 		}
 		if (SnakePanel2.soundStatus) {
-			soundMenu.setLabel("    “Ù–ß  on");
+			soundMenu.setLabel("Sound on");
 		} else {
-			soundMenu.setLabel("    “Ù–ß  off");
+			soundMenu.setLabel("Sound off");
 		}
 		// Container cont=frame.getContentPane();
 		// cont.setLayout(null);
 		// cont.setBounds(200, 0, 200, 25);
 		// cont.setBackground(Color.black);
-		Menu option = new Menu("    —°œÓ");
+		Menu option = new Menu("Setting");
 		option.add(musicMenu);
 		option.add(soundMenu);
 		musicMenu.addActionListener(this);
@@ -90,22 +90,22 @@ class mainFrame extends JFrame implements ActionListener {
 		if (e.getSource() == musicMenu) {
 			if (SnakePanel2.musicStatus) {
 				SnakePanel2.musicStatus = false;
-				musicMenu.setLabel("    ±≥æ∞“Ù¿÷  off");
+				musicMenu.setLabel("Music off");
 //				panel.turnMusic(false);
 //				music.stop();
 			} else {
 				SnakePanel2.musicStatus = true;
-				musicMenu.setLabel("    ±≥æ∞“Ù¿÷  on");
+				musicMenu.setLabel("Music on");
 //				panel.turnMusic(true);
 //				music.loadMusic();
 			}
 		} else if (e.getSource() == soundMenu) {
 			if (SnakePanel2.soundStatus) {
 				SnakePanel2.soundStatus = false;
-				soundMenu.setLabel("    “Ù–ß  off");
+				soundMenu.setLabel("Sound off");
 			} else {
 				SnakePanel2.soundStatus = true;
-				soundMenu.setLabel("    “Ù–ß  on");
+				soundMenu.setLabel("Sound on");
 			}
 		}
 	}

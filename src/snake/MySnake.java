@@ -69,7 +69,7 @@ public class MySnake extends JPanel implements ActionListener, KeyListener {
 		drawSnake(this, g);
 	}
 
-	// Ôö¼ÓÒ»½ÚÉíÌå
+	// å¢åŠ ä¸€èŠ‚èº«ä½“
 	public void addBody(SnakeVector2D pos) {
 		bodyList.insertElementAt(pos, 0);
 		Bodylength = bodyList.size();
@@ -81,7 +81,7 @@ public class MySnake extends JPanel implements ActionListener, KeyListener {
 		}
 	}
 
-	// ÅĞ¶ÏÊÇ·ñ³Ôµ½×Ô¼º£¬³Ôµ½·µ»Øtrue£¬Ã»ÓĞ¾Í·µ»Øfalse
+	// åˆ¤æ–­æ˜¯å¦åƒåˆ°è‡ªå·±ï¼Œåƒåˆ°è¿”å›trueï¼Œæ²¡æœ‰å°±è¿”å›false
 	public boolean eatSlef() {
 		SnakeVector2D head = (SnakeVector2D) bodyList.elementAt(0);
 		SnakeVector2D body;
@@ -94,7 +94,7 @@ public class MySnake extends JPanel implements ActionListener, KeyListener {
 		return false;
 	}
 
-	// ÅĞ¶ÏÊÇ·ñ³Ôµ½Ê³Îï£¬³Ôµ½·µ»Øtrue£¬Ã»ÓĞ¾Í·µ»Øfalse
+	// åˆ¤æ–­æ˜¯å¦åƒåˆ°é£Ÿç‰©ï¼Œåƒåˆ°è¿”å›trueï¼Œæ²¡æœ‰å°±è¿”å›false
 	public boolean eatFood(SnakeVector2D food) {
 		SnakeVector2D head = (SnakeVector2D) bodyList.elementAt(0);
 		if (head.x == food.x && head.y == food.y) {
@@ -103,7 +103,7 @@ public class MySnake extends JPanel implements ActionListener, KeyListener {
 		return false;
 	}
 
-	// ÉßÉíÆ½»¬ÒÆ¶¯
+	// è›‡èº«å¹³æ»‘ç§»åŠ¨
 	public void moveSnake() {
 		SnakeVector2D unit;
 		for (int i = 0; i < Bodylength; i++) {
@@ -165,7 +165,7 @@ public class MySnake extends JPanel implements ActionListener, KeyListener {
 			moveStep++;
 			if (moveStep > 4) {
 				moveStep = 0;
-				// ÉßÒÆ¶¯ÁËÒ»´ó¸ñ
+				// ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½
 				for (int i = Bodylength - 1; i > 0; i--) {
 					SnakeVector2D tail = (SnakeVector2D) bodyList.elementAt(i);
 					SnakeVector2D prv = (SnakeVector2D) bodyList

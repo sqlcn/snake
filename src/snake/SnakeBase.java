@@ -58,7 +58,7 @@ public class SnakeBase {
 		for (int i = 0; i < width * height - length; i++) {
 			fx = rand.nextInt(width);
 			fy = rand.nextInt(height);
-			// ±éÀúÕûÌõÉßÉí£¬¿´Ê³ÎïÊÇ·ñ³öÏÖÔÚÉíÌåÉÏ
+			// éå†æ•´æ¡è›‡èº«ï¼Œçœ‹é£Ÿç‰©æ˜¯å¦å‡ºç°åœ¨èº«ä½“ä¸Š
 			int j;
 			for (j = 0; j < length; j++) {
 				SnakeVector2D temp = (SnakeVector2D) bodyList.elementAt(j);
@@ -116,7 +116,7 @@ public class SnakeBase {
 		if (dir == SnakeVector2D.UP) {
 			head.y--;
 			if (head.y < 0) {
-				// type ÎªÕæ±íÊ¾¿É´©¹ıÆÁÄ»Ñ­»·
+				// ä¸ºçœŸè¡¨ç¤ºå¯ç©¿è¿‡å±å¹•å¾ªç¯
 				if (type)
 					head.y = height - 1;
 				else
@@ -125,7 +125,7 @@ public class SnakeBase {
 		} else if (dir == SnakeVector2D.DOWN) {
 			head.y++;
 			if (head.y >= height) {
-				// type ÎªÕæ±íÊ¾¿É´©¹ıÆÁÄ»Ñ­»·
+				// ä¸ºçœŸè¡¨ç¤ºå¯ç©¿è¿‡å±å¹•å¾ªç¯
 				if (type)
 					head.y = 0;
 				else
@@ -134,7 +134,7 @@ public class SnakeBase {
 		} else if (dir == SnakeVector2D.LEFT) {
 			head.x--;
 			if (head.x < 0) {
-				// type ÎªÕæ±íÊ¾¿É´©¹ıÆÁÄ»Ñ­»·
+				// ä¸ºçœŸè¡¨ç¤ºå¯ç©¿è¿‡å±å¹•å¾ªç¯
 				if (type)
 					head.x = width - 1;
 				else
@@ -143,7 +143,7 @@ public class SnakeBase {
 		} else if (dir == SnakeVector2D.RIGHT) {
 			head.x++;
 			if (head.x >= width) {
-				// type ÎªÕæ±íÊ¾¿É´©¹ıÆÁÄ»Ñ­»·
+				// ä¸ºçœŸè¡¨ç¤ºå¯ç©¿è¿‡å±å¹•å¾ªç¯
 				if (type)
 					head.x = 0;
 				else
